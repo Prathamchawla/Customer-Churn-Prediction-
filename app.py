@@ -20,7 +20,7 @@ def start_tensorboard(logdir):
     return tensorboard_process
 
 # Set the path to your TensorBoard logs
-log_directory = "logs/fit20240920-001317"  # Your specified log directory
+log_directory = "logs/fit"  # Your specified log directory
 
 # Start TensorBoard
 tensorboard_process = start_tensorboard(log_directory)
@@ -98,7 +98,7 @@ st.markdown(
 st.header("Dataset Preview")
 try:
     # Replace 'data.csv' with your actual CSV file path
-    data = pd.read_csv(r'C:\Users\HP\Desktop\Generative AI\Regression Project with ANN\Churn_Modelling.csv')
+    data = pd.read_csv('Churn_Modelling.csv')
     st.dataframe(data)  # Display the data as a table
 except FileNotFoundError:
     st.error("The CSV file was not found. Please check the file path.")
